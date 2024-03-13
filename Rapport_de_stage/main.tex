@@ -1,0 +1,50 @@
+\documentclass{article}[]
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage[style=indexgroup]{glossaries}
+\usepackage[table]{xcolor}
+\usepackage{minted}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{multirow}
+\definecolor{conv}{HTML}{E8E7EC}
+\definecolor{pool}{HTML}{D7D8DA}
+\definecolor{input}{HTML}{ffffff}
+\definecolor{drop}{HTML}{F7F8FC}
+\definecolor{dense}{HTML}{D5D6DA}
+\definecolor{flat}{HTML}{F4F5FA}
+\definecolor{output}{HTML}{B6B7B9}
+
+
+\tikzset{conv/.style={black,draw=black,fill=conv,rectangle,minimum height=1cm}}
+\tikzset{pool/.style={black,draw=black,fill=pool,rectangle,minimum height=1cm}}
+\tikzset{input/.style={black,draw=black,fill=input,rectangle,minimum height=1cm}}
+\tikzset{drop/.style={black,draw=black,fill=drop,rectangle,minimum height=1cm}}
+\tikzset{dense/.style={black,draw=black,fill=dense,rectangle,minimum height=1cm}}
+\tikzset{flat/.style={black,draw=black,fill=flat,rectangle,minimum height=1cm}}
+\tikzset{output/.style={black,draw=black,fill=output,rectangle,minimum height=1cm}}
+
+
+\setglossarystyle{super3colheaderborder}
+\setlength{\glsdescwidth}{\linewidth}
+\geometry{hmargin=2.5cm,vmargin=1.5cm}   
+\pagenumbering{gobble}
+\input{C) Back matter/glossaire}
+\begin{document}
+\include{A) Font matter/1- Cover}
+% \include{A) Font matter/2- Acknowledgements }
+% \include{A) Font matter/4- Avant-propos}
+\tableofcontents{\centering}
+\clearpage % passe à la page suivante
+
+\pagenumbering{arabic} 
+\input{A) Font matter/3- Introduction}
+\input{B) Sections/RHEA}
+\input{B) Sections/AI}
+\input{B) Sections/Besoins et Contraintes}
+\input{B) Sections/objectif_1}
+\include{C) Back matter/myBib}
+\end{document}

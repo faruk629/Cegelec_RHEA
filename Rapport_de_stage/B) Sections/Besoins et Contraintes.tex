@@ -1,0 +1,50 @@
+\section{Besoins et contraintes du projet}
+
+Dans cette section, nous exposons les éléments essentiels du projet, détaillant les besoins et contraintes nécessaires à sa réussite.
+
+
+\subsection{Besoins}
+Avant de se lancer dans un projet, il est crucial d'identifier les besoins essentiels qui détermineront sa réussite. Ces besoins servent de guide et permettent à atteindre les résultats souhaités à la fin du projet. Cette sous-section les présente. \\
+
+\noindent \textbf{Précision de l'identification} Le système doit garantir une identification précise des paramètres fonctionnels liés à la pose du ballast, tels que le type de traverse, la topologie de la voie, etc. \\
+
+\noindent \textbf{Automatisation} \\
+ La mise en place d'un processus automatisé est essentielle pour assurer l'efficacité opérationnelle, en particulier dans la détection des anomalies et la gestion de la végétation. \\
+ 
+\noindent \textbf{Intégration de données} \\
+Le système doit être capable d'intégrer et d'analyser les données recueillies par les trains de mesure d'Infrabel de manière cohérente et précise. \\
+
+\noindent \textbf{Maintenance prédictive} \\
+Le développement du système doit permettre la mise en place d'un outil de maintenance prédictive du ballast ferroviaire, en identifiant les zones nécessitant une intervention.
+    
+
+
+\subsection{Contraintes}
+Cette sous-section présente, les contraintes et les défis à prendre en compte lors de la conception et la mise en oeuvre du projet. \\
+
+\noindent \textbf{Contraintes technologiques} \\
+L'intégration des modèles d'intelligence artificielle développés en Python peut présenter des défis majeurs en raison de l'écosystème principal utilisé en Java. L'absence de GPU dans le contexte Java peut affecter la performance et la compatibilité avec les modèles existants.\\
+
+\noindent \textbf{Explicabilité des modèles} \\
+ Certains modèles d'IA, en particulier les réseaux neuronaux complexes, peuvent être considérés comme des "boites noires". Dans le cas de ce projet, il est nécessaire de pouvoir comprendre et interpréter les résultats produits par les modèles d'apprentissage automatique.\\
+
+\noindent \textbf{Complexité des variations du terrain} \\
+Les petites variations, telles que la végétation cachant partiellement le ballast, présentent des défis pour l'identificaiton. \\
+
+\noindent \textbf{Données limitées pour l'entraînement des modèles } \\
+L'absence de données d'entraînement complètes pour tous les types de traverses peut limiter l'efficacité des modèles dans la reconnaissance et le traitement de certaines traverses. Cela souligne l'importance de mener des campagnes pour enregistrer tous les types de traverses.
+
+
+
+\subsection{Conclusion}
+En conclusion, le projet se déploie selon plusieurs étapes stratégiques. Nous commençons par l'identification du type de traverse en utilisant des modèles de classification simples, puis évoluons vers des modèles plus complexes. Une phase initiale de test se limite à une portion restrainte de données, par exemple deux types de traverses. Ensuite, nous utilisons le modèle pour inférer dans l'écosystème Java, en explorant des méthodes telles que l'utilisation d'API, de script, ou d'autres astuces. Enfin, nous évaluons le modèle pour garantir la précision attendue. Cette approche progressive vise à assurer le développment cohérent et efficace du projet. \\
+
+\noindent Une fois cette première phase achevée, nous aurons l'opportunité d'examiner d'autres aspects du projet, notamment la détection des vois à proximité et la localisation de la végétation. 
+
+
+
+
+% \subsection{Exigences Techniques}
+% L'environnement de travail est constitué de logiciels tels que Python et Jupyter Notebook qui nous permettent d'analyser, de traiter et de présenter les données. nous utilisons également des librairies (\textit{cf.} Section 3.2) qui nous permettent de travailler de manière efficace sur des projets de data science et de répondre aux exigences techniques du domaine. 
+
+

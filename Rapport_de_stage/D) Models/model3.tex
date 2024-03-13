@@ -1,0 +1,44 @@
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \node[input,minimum width=2cm, minimum height=2cm] (x) at (-0.50,0)
+    {\small Input};
+ 
+    \node[conv,rotate=90,minimum width=4.5cm] (conv1) at (1.25,0) 
+    {\small\textbf{Conv1D (32,2) + ReLU}};
+    
+    \node[pool,rotate=90,minimum width=4.5cm] (pool1) at (2.5,0) {\small\textbf{MaxPooling1D (2)}};
+
+    \node[drop,rotate=90,minimum width=4.5cm] (drop1) at (3.75,0) {\small\textbf{Dropout (0.5)}};
+
+    \node[conv,rotate=90,minimum width=4.5cm] (conv2) at (5,0) 
+    {\small\textbf{Conv1D (64,3) + ReLU}};
+
+    \node[pool,rotate=90,minimum width=4.5cm] (pool2) at (6.25,0) {\small\textbf{MaxPooling1D (2)}};
+    
+    \node[flat,rotate=90,minimum width=4.5cm] (flat1) at (7.5,0) {\small\textbf{Flatten}};
+    
+    \node[dense,rotate=90,minimum width=4.5cm] (dense1) at (8.75,0) {\small\textbf{Dense (128) + ReLU}};
+    
+    \node[drop,rotate=90,minimum width=4.5cm] (drop2) at (10,0) {\small\textbf{Dropout (0.5)}};
+    
+    \node[dense,rotate=90,minimum width=4.5cm] (dense2) at (11.25,0) {\small\textbf{Dense (3) + Softmax}};
+
+    \node[output,minimum width=2cm, minimum height=2cm] (y) at (13,0) 
+    {\small\textbf{$Output$}};
+
+
+    \draw[-] (x) -- (conv1);
+    \draw[-] (conv1) -- (pool1);
+    \draw[-] (pool1) -- (drop1);
+    \draw[-] (drop1) -- (conv2);
+    \draw[-] (conv2) -- (pool2);
+    \draw[-] (pool2) -- (flat1);
+    \draw[-] (flat1) -- (dense1);
+    \draw[-] (dense1) -- (drop2);
+    \draw[-] (drop2) -- (dense2);
+    \draw[-] (dense2) -- (y);
+  \end{tikzpicture}
+  \vskip 6px
+  \caption{An illustration of.}
+\end{figure}

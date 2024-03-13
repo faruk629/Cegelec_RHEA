@@ -1,0 +1,26 @@
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \node[input,minimum width=2cm, minimum height=2cm] (x) at (-0.50,0)
+    {\small Input};
+ 
+    \node[conv,rotate=90,minimum width=4.5cm] (conv1) at (1.25,0) 
+    {\small\textbf{Conv1D (32,2) + ReLU}};
+    
+    \node[flat,rotate=90,minimum width=4.5cm] (flat1) at (2.5,0) {\small\textbf{Flatten}};
+    
+    \node[dense,rotate=90,minimum width=4.5cm] (dense1) at (3.75,0) {\small\textbf{Dense (3) + Softmax}};
+
+    \node[output,minimum width=2cm, minimum height=2cm] (y) at (5.5,0) 
+    {\small\textbf{$Output$}};
+
+
+    \draw[-] (x) -- (conv1);
+    \draw[-] (conv1) -- (flat1);
+    \draw[-] (flat1) -- (dense1);
+    \draw[-] (dense1) -- (y);
+
+  \end{tikzpicture}
+  \vskip 6px
+  \caption{An illustration of.}
+\end{figure}
